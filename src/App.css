@@ -1,0 +1,122 @@
+/* Ensure html and body take up the full height of the viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Set a base font for the application */
+  background-color: #282c34; /* Set a base background color for the entire page */
+}
+
+/* Ensure the root div takes up the full height of the viewport */
+#root {
+  height: 100%;
+}
+
+/* Style the App component to take up the full height and set the background */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+  height: 100%;            /* Full height of parent */
+  background-image: url('./assets/bg.png'); /* Add your background image */
+  background-size: cover;  /* Ensure the image covers the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  text-align: center;      /* Center-align text */
+  padding: 20px;           /* Add some padding */
+  box-shadow: inset 0 0 10px #000000; /* Add an inset shadow for depth */
+}
+
+/* Style the main title */
+.center-text {
+  margin: 20px 0;          /* Add some margin to the top */
+  font-size: 3em;          /* Increase font size for the main title */
+  color: #1b0101;          /* White color for better contrast */
+  text-shadow: 2px 2px 4px #000000; /* Add text shadow for better readability */
+}
+
+/* Style the section titles (h2) */
+h2 {
+  margin: 20px 0;
+  font-size: 1.8em;       /* Set a reasonable font size for section titles */
+  color: #1d0101;         /* Ensure section titles are readable */
+  text-shadow: 1px 1px 3px #000000; /* Add a subtle text shadow */
+}
+
+/* Style the input fields */
+input[type="email"],
+input[type="file"],
+input[type="text"] {
+  display: block;               /* Make input fields block elements */
+  width: calc(100% - 40px);     /* Full width with padding considered */
+  max-width: 400px;             /* Set a maximum width for inputs */
+  margin: 10px auto;            /* Center horizontally with some margin */
+  padding: 15px;                /* Add padding inside the input */
+  border: 1px solid #ccc;       /* Light gray border */
+  border-radius: 5px;           /* Rounded corners */
+  box-sizing: border-box;       /* Include padding and border in element's total width and height */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  font-size: 1em;               /* Ensure font size is readable */
+  transition: all 0.3s ease-in-out; /* Smooth transition for focus effect */
+}
+
+/* Focus effect for input fields */
+input:focus {
+  outline: none;                /* Remove default outline */
+  border-color: #007BFF;        /* Change border color on focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add a blue glow */
+}
+
+/* Style the buttons */
+button {
+  display: block;               /* Make button a block element */
+  width: calc(100% - 40px);     /* Full width with padding considered */
+  max-width: 200px;             /* Set a maximum width for buttons */
+  margin: 10px auto;            /* Center horizontally with some margin */
+  padding: 15px;                /* Add padding inside the button */
+  border: none;                 /* Remove default border */
+  border-radius: 5px;           /* Rounded corners */
+  background-color: #007BFF;    /* Primary blue background color */
+  color: rgb(34, 1, 1);                 /* White text color */
+  font-size: 1em;               /* Set font size */
+  cursor: pointer;              /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transition for background color */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add a shadow */
+}
+
+/* Add hover effect to buttons */
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(0, 86, 179, 0.7); /* More intense shadow on hover */
+}
+
+/* Style for the decoded text paragraph */
+p {
+  margin: 20px 0;          /* Add some margin */
+  font-size: 1.2em;        /* Increase font size */
+  color: #ffffff;          /* Ensure text color is readable */
+  text-shadow: 1px 1px 3px #000000; /* Add a subtle text shadow */
+}
+
+/* Additional styles for better aesthetics */
+input:focus,
+button:focus {
+  outline: none;           /* Remove default outline */
+  box-shadow: 0 0 5px #007BFF; /* Add a blue glow */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;         /* Reduce padding on smaller screens */
+  }
+
+  input[type="email"],
+  input[type="file"],
+  input[type="text"],
+  button {
+    width: calc(100% - 20px); /* Adjust width for smaller screens */
+  }
+}
